@@ -1,23 +1,19 @@
+version: 2
 jobs:
-  deploy:
+  build:
     docker:
-      - image: cibuilds/base
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
     steps:
-      - attach_workspace:
-          at: my-site
-      - run: ls -lah my-site
-orbs:
-  hugo: circleci/hugo@0.4.1
-version: 2.1
-workflows:
-  main:
-    jobs:
-      - hugo/build:
-          html-proofer: true
-          source: src/
-      - deploy:
-          filters:
-            branches:
-              only: master
-          requires:
-            - hugo/build
+      - run: apk update && apk add git
+      - checkout
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run:
+          name: test our generated HTML files
+          command: |
+            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+            --empty-alt-ignore --disable-external
+      - run: |
+          ls -la $HUGO_BUILD_DIR
