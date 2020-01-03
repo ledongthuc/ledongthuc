@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Copy build to ledongthuc.github.io
           command: |
-            cp -R ~/hugo/public/* ~/ledongthuc.github.io/*
+            cp -R $HUGO_BUILD_DIR/* ~/ledongthuc.github.io/*
       - run:
           name: Push ledongthuc.github.io
           command: |
