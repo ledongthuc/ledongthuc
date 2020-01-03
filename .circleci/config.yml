@@ -9,10 +9,21 @@ jobs:
     steps:
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
-        #      - run:
-        #          name: test our generated HTML files
-        #          command: |
-        #            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
-        #            --empty-alt-ignore --disable-external
       - run: |
           ls -la $HUGO_BUILD_DIR
+      - add_ssh_keys:
+          fingerprints:
+            - "a7:fa:f1:20:c7:c5:ae:13:55:0a:0a:bb:bb:6e:ac:a2"
+      - run:
+          name: Clone ledongthuc.github.io
+          command: |
+            git clone git@github.com:ledongthuc/ledongthuc.github.io.git ~/ledongthuc.github.io
+      - run:
+          name: Copy build to ledongthuc.github.io
+          command: |
+            cp -R ~/hugo/public/* ~/ledongthuc.github.io/*
+      - run:
+          name: Push ledongthuc.github.io
+          command: |
+            cd ~/ledongthuc.github.io/
+            git push origin master
