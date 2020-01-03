@@ -22,5 +22,7 @@ jobs:
           name: Push ledongthuc.github.io
           command: |
             cd $HUGO_BUILD_DIR
+            git config --global user.email "ledongthuc@gmail.com"
+            git config --global user.name "ledongthuc"
             git commit -a -m "Update"
             git push origin master
