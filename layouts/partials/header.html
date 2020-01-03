@@ -1,12 +1,11 @@
-<header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
-</header>
+<div class="header">
+  {{ $currentPage := . }}
+  {{ .Site.Title }} &copy; {{ now.Year }}
+  <div class="menu">
+  {{ with .Site.Menus.main }}
+      {{ range . }}
+      | <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{- end }}
+  {{ end }}
+  </div>
+</div>

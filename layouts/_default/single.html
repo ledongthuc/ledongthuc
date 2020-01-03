@@ -2,7 +2,7 @@
   <h1>{{ .Title | title }}</h1>
   <div class="main">
     <div class="article">
-      {{ with .Params.series }}<a class="series" href="{{ "/series/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> | {{ end }}
+      {{ with .Params.series }}Part of series <a class="series" href="{{ "/series/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> | {{ end }}
       <time>{{ with .Date }}{{ .Format "2006-01-02" }}{{ end }}</time>
       <div>
         {{ .Content }}
