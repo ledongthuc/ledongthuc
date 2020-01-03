@@ -1,0 +1,23 @@
+jobs:
+  deploy:
+    docker:
+      - image: cibuilds/base
+    steps:
+      - attach_workspace:
+          at: my-site
+      - run: ls -lah my-site
+orbs:
+  hugo: circleci/hugo@0.4.1
+version: 2.1
+workflows:
+  main:
+    jobs:
+      - hugo/build:
+          html-proofer: true
+          source: src/
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - hugo/build
