@@ -22,5 +22,5 @@ jobs:
           name: Push ledongthuc.github.io
           command: |
             cd $HUGO_BUILD_DIR
-            git commit -a "Update"
+            git commit -a -m "Update"
             git push origin master
