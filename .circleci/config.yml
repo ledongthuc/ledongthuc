@@ -17,7 +17,7 @@ jobs:
             git clone git@github.com:ledongthuc/ledongthuc.github.io.git $HUGO_BUILD_DIR
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - run: |
-          tree $HUGO_BUILD_DIR
+          ls -la $HUGO_BUILD_DIR
       - run:
           name: Push ledongthuc.github.io
           command: |
