@@ -4,4 +4,4 @@ menu = "main"
 weight = 4
 +++
 
-A software engineer, a hundsband and a father.
+A software engineer, a husband and a father.
