@@ -33,25 +33,33 @@ Two main reasons I choose it because:
  - I setup vim/sublime or any application to write snipet code if Ctrl+Shift+B
 
 ```
-                                    ┌─────────┐
-                                    │ VIM     │
-┌────────┐                          │         │
-│        │                          ├──────┐  │
-│ Pedal  │────Ctrl + Shift + B────> │Action│  │
-│        │                          ├──────┘  │
-└────────┘                          │         │
-                                    │         │
-                                    └─────────┘
-
-                                    ┌─────────┐
-                                    │ Sublime │
- ┌────────┐                         │         │
- │ Pedal  │                         ├──────┐  │
- │        │──Ctrl + Shift + B─────> │Action│  │
- │        │                         ├──────┘  │
- └────────┘                         │         │
-                                    │         │
-                                    └─────────┘
+                                    ┌──────────────────┐
+                                    │ VIM              │
+┌────────┐                          │                  │
+│        │                          ├──────┐  ┌──────┐ │
+│ Pedal  │────Ctrl + Shift + B─────▶│Plugin│─▶│action│ │
+│        │                          ├──────┘  └──────┘ │
+└────────┘                          │                  │
+                                    │                  │
+                                    └──────────────────┘
+                                    ┌──────────────────┐
+                                    │ Sublime          │
+ ┌────────┐                         │                  │
+ │ Pedal  │                         ├──────┐  ┌──────┐ │
+ │        │──Ctrl + Shift + B──────▶│Plugin│─▶│action│ │
+ │        │                         ├──────┘  └──────┘ │
+ └────────┘                         │                  │
+                                    │                  │
+                                    └──────────────────┘
+                                    ┌──────────────────┐
+                                    │ Browser/Document │
+ ┌────────┐                         │                  │
+ │ Pedal  │                         │         ▲        │
+ │        │────Page Up/Down────────▶│         │        │
+ │        │                         │         │        │
+ └────────┘                         │         ▼        │
+                                    │                  │
+                                    └──────────────────┘
 ```
 
 ### Step 1: Install Foot Switch Configuration Tool
@@ -69,4 +77,4 @@ Plug Olympus Foot Switch RS28H to your machine, open FTSW toll, that you downloa
 
 ![FTSW tool](/images/foot-switch-keyboard-pedal/ftsw.png)
 
-## What's it can help you
+## Scrolling, page up, page down
