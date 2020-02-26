@@ -3,7 +3,7 @@ title: "Setup foot switch keyboard pedal"
 series: "tools"
 summary: "Note to setup foot switch keyboard pedal"
 date: 2020-02-22T21:00:00+01:00
-draft: false
+draft: true
 tags:
 - gadgets
 - setup
