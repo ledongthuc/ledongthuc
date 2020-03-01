@@ -1,6 +1,6 @@
 baseURL = "https://thuc.space"
 languageCode = "en-us"
-title = "Thuc's blog"
+title = "Thuc's notes"
 [taxonomies]
   category = "categories"
   series = "series"
