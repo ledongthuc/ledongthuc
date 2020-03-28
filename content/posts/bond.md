@@ -48,4 +48,4 @@ tags:
 
  - The issuer has a poor credit rating, the risk greater, and these bonds pay more interest
  - Bonds have a very long maturity date, it frequently pays a higher interest rate
- - Example duration's 5 years. Interest increase 1%, bond's price will be down 5% (1% * 5). https://www.accountingcoach.com/blog/bonds-price-interest-rates
+ - Example duration's 5 years. Interest increase 1%, bond's price will be down 5% (1% * 5). [Reference](https://www.accountingcoach.com/blog/bonds-price-interest-rates)
