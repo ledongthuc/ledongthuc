@@ -11,8 +11,6 @@ tags:
 - finance
 ---
 
-# Bond:
-
  - A loan made by you, a lender, to a borrower who's government, company or organization
  - Fixed-income security with fixed periodic interest, and the eventual return of principal at maturity.
 
