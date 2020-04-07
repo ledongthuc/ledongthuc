@@ -42,6 +42,18 @@ tags:
  - Pricing bonds: market price of the bond
  - Yield to maturity: is the total return anticipated on a bond if the bond is held until the end of its lifetime.
 
+# How to buy:
+
+## Government bonds
+
+ - Can by from TreasuryDirect or broker
+
+## Corporate or municipal bonds
+
+ - Can by from broker
+
+TreasuryDirect
+
 # Notes:
 
  - The issuer has a poor credit rating, the risk greater, and these bonds pay more interest

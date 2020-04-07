@@ -3,7 +3,7 @@ title: "Go module"
 series: "go"
 summary: "Notes when using Go Module"
 date: 2020-04-04T21:00:00+01:00
-draft: false
+draft: true
 tags:
 - go
 - module
@@ -26,11 +26,12 @@ go.sum
  - Ensure the modules your project depends on do not change
  - Should commit to version control
 
-$GOPATH/pkg/mod
+Caching module
+ - $GOPATH/pkg/mod
 
 Pseudo-versions
 	
-Untagged revisions can be referred to use when versionning. They have form format:
+Untagged revisions are used when versionning dependencies
 
  - vX.0.0-yyyymmddhhmmss-hashcommit is used when there is no earlier versioned commit with an appropriate major version before the target commit
  - vX.Y.Z-pre.0.yyyymmddhhmmss-hashcommit is used when the most recent versioned commit before the target commit is vX.Y.Z-pre
@@ -40,6 +41,7 @@ Untagged revisions can be referred to use when versionning. They have form forma
 
 	go mod init <package>
 		Init a new module
+		Use to convert other dependencies to go modules https://github.com/golang/go/blob/master/src/cmd/go/internal/modconv/modconv.go
 
 	go list -m all
 		List all dependencies in a module
