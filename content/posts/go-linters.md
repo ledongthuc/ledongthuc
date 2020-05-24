@@ -1,6 +1,7 @@
 ---
 title: "Go linters"
 series: "go"
+categories: "notes"
 summary: "Ensure of rules in Go code"
 date: 2020-04-21T21:00:00+01:00
 draft: true

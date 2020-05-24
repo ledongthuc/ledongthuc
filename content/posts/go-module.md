@@ -1,6 +1,7 @@
 ---
 title: "Go module"
 series: "go"
+categories: "notes"
 summary: "Notes when using Go Module"
 date: 2020-04-04T21:00:00+01:00
 draft: true

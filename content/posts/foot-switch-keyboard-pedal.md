@@ -1,6 +1,7 @@
 ---
 title: "Setup foot switch keyboard pedal"
 series: "tools"
+categories: "notes"
 summary: "Give a hand to control the machine"
 date: 2020-02-22T21:00:00+01:00
 draft: false

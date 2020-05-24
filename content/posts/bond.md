@@ -1,6 +1,7 @@
 ---
 title: "Bond"
 series: "finance"
+categories: "notes"
 summary: "Notes about bonds"
 date: 2020-03-28T21:00:00+01:00
 draft: false

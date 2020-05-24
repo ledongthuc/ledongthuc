@@ -17,10 +17,15 @@ title = "Thuc's notes"
     url = "/series/"
     weight = 2
   [[menu.main]]
+    identifier = "tldr"
+    name = "tldr"
+    url = "/tldr/"
+    weight = 3
+  [[menu.main]]
     identifier = "tags"
     name = "tags"
     url = "/tags/"
-    weight = 3
+    weight = 4
 [markup]
   [markup.highlight]
     codeFences = true
