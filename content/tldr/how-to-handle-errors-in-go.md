@@ -1,5 +1,5 @@
 ---
-title: "How to handle errors in Go?"
+title: "Five rules to handle errors in Go?"
 categories: "tldr"
 summary: "Handle error in Golang with five rules to make it efficiently."
 date: 2020-04-23T08:00:00+01:00

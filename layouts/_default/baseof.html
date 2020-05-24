@@ -12,6 +12,12 @@
     {{ with .OutputFormats.Get "RSS" -}}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{- end }}
+    <!-- Social Tags -->
+    <meta property="og:title" content="{{ if .Title }}{{ .Site.Title }} - {{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+    <meta property="og:image" content="{{ if .Params.SocialImage }}{{ .Params.SocialImage }}{{ else }}{{ .Site.Params.SocialImage }}{{ end }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:type" content="website" />
   </head>
   <body>
     {{ partial "header" . }}

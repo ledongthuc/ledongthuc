@@ -1,6 +1,6 @@
 baseURL = "https://thuc.space"
 languageCode = "en-us"
-title = "Thuc's notes"
+title = "Thuc notes"
 [taxonomies]
   category = "categories"
   series = "series"
@@ -37,3 +37,6 @@ title = "Thuc's notes"
     noClasses = true
     style = "github"
     tabWidth = 2
+[params]
+  description = "Place I put all notes, research some stuffs."
+  socialImage = "/images/social.png"

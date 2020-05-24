@@ -4,7 +4,7 @@
     {{ $items := where .Site.Pages "Params.categories" "tldr" }}
     {{ range $items }}
       <div class="article">
-        <div class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+        <h2 class="title">{{ .Title }}</h2>
         <div class="original">
           <div class="author">Author: {{ .Params.Author }}</div>
           <div class="source">Source: <a href="{{ .Params.Source }}" target="_blank">{{ .Params.Source }}</a></div>
